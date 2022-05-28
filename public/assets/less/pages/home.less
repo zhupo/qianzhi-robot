@@ -1,0 +1,192 @@
+
+@themeColor: #fff;
+
+.home-wrap {
+  padding-top: 0;
+  .home-header {
+    height: 900px;
+    width: 100%;
+    background: url('../../img/png/banner.jpg');
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    .navbar {
+      height: 100px;
+      font-size: 16px;
+      border-radius: 0 !important;
+      border-bottom: 2px solid @themeColor;
+      background-color: rgba(0, 0, 0, 0.3);
+      max-width: 1500px;
+      margin: 0 auto;
+      color: @themeColor;
+
+      .navbar-nav {
+        &>li>a {
+          color: @themeColor;
+        }
+        &.menu-list {
+          li {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 5px;
+            a:hover {
+              transform: scale(1.3);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+        &>li>a:hover,
+        &>li>a:focus {
+          background-color: transparent;
+          color: @themeColor;
+        }
+      }
+
+      .navbar-form {
+        line-height: 30px;
+        .search-input {
+          display: none;
+          width: 0;
+          border-radius: 5px;
+        }
+      }
+
+      .container-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        .logo-wrap {
+          height: 50px;
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+      .navbar-header {
+        white-space: nowrap;
+      }
+    }
+
+
+    .home-header-detail {
+      color: @themeColor;
+      margin-top: 250px;
+      .title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .sub-title {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+
+  #home-body {
+    .home-body-card {
+      width: 100%;
+
+      &.strategic-partners {
+        min-height: 600px;
+        background-image: url('../../img/png/partners-bg.jpg');
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        color: @themeColor;
+        padding-top: 50px;
+        .title {
+          font-size: 40px;
+        }
+        hr {
+          width: 60px;
+          height: 3px;
+          background-color: @themeColor;
+          margin-top: 20px;
+          margin-bottom: 40px;
+        }
+        #strategicPartners .item {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+      .card-item {
+        margin: auto;
+        margin-top: 40px;
+        .top-title {
+          display: block;
+          color: #1C71BF;
+        }
+        .title {
+          display: block;
+          font-size: 20px;
+          color: #000;
+          font-weight: bold;
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+        .sub-title {
+          display: block;
+          font-size: 12px;
+          line-height: 2em;
+        }
+
+        .content-item {
+          height: 680px;
+          overflow: hidden;
+          position: relative;
+          border: 0;
+          box-shadow: 0 0 20px #ccc;
+          padding: 0;
+          margin-bottom: 30px;
+
+          .card-img-wrap {
+            height: 430px;
+            position: relative;
+            &-bg {
+              width: 100%;
+              height: 370px;
+              opacity: 0.5;
+              background-position: center;
+              background-size: auto 100%;
+              background-repeat: no-repeat;
+            }
+
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              position: absolute;
+              bottom: 0;
+            }
+          }
+
+          .caption {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+
+          .caption-content {
+            color: #919293;
+            line-height: 1.8em;
+            margin-top: 20px;
+            max-height: 155px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+
+          .product-learn-more {
+            position: absolute;
+            bottom: 50px;
+          }
+        }
+
+      }
+    }
+  }
+}
