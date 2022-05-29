@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => '我的网站',
+    'name' => '湖南千智机器人科技发展有限公司',
     'beian' => '',
     'cdnurl' => '',
     'version' => '1.0.1',
