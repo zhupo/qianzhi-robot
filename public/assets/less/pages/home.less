@@ -282,20 +282,17 @@ body {
                 }
               }
             }
-            
           }
-
-          
         }
-
       }
     }
   }
 
   footer {
     .contact-us {
-      height: 100px;
-      line-height: 100px;
+      min-height: 100px;
+      line-height: 44px;
+      padding: 28px 0;
       background-color: #1C71BF;
       color: @themeColor;
       .btn {
@@ -305,7 +302,7 @@ body {
     }
 
     .page-footer {
-      height: 540px;
+      min-height: 540px;
       background-image: url('../../img/png/bg-footer.jpg');
       background-position: center;
       background-size: auto 100%;
@@ -315,13 +312,55 @@ body {
       color: @themeColor;
       .footer-info {
         flex: 1;
-        padding: 30px 0;
+        padding-bottom: 30px;
+        .container > .row > div {
+          padding-top: 30px;
+        }
         .title {
+          display: block;
           font-size: 20px;
           margin-bottom: 25px;
         }
         p {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
+          font-size: 12px;
+        }
+        .zh-list {
+          display: flex;
+          align-items: baseline;
+          font-size: 14px;
+          .icon {
+            margin-right: 5px;
+          }
+        }
+
+        .media {
+          img {
+            background-color: @themeColor;
+            border-radius: 5px;
+            width: 100px;
+            height: 80px;
+          }
+          .date {
+            display: block;
+            color: #999;
+            margin-top: 10px;
+          }
+          .media-body {
+            padding: 10px 0;
+          }
+          .media-heading {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        .contact-from {
+          input, textarea {
+            background-color: #353637;
+            border-color: #353637;
+          }
         }
       }
       hr {
@@ -330,9 +369,21 @@ body {
         height: 1px;
       }
       .footer-copyright {
-        height: 100px;
-        line-height: 100px;
+        min-height: 100px;
+        line-height: 30px;
         border-top: 1px solid ;
+        .row {
+          padding: 35px 0; 
+          & > div {
+            height: 30px;
+          }
+        }
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
       }
     }
   }

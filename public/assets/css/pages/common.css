@@ -46,3 +46,7 @@
   -webkit-box-orient: vertical;
 }
 
+
+.full-width {
+  width: 100%;
+}

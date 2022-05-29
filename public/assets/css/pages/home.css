@@ -243,8 +243,9 @@ body {
   margin-bottom: 30px;
 }
 .home-wrap footer .contact-us {
-  height: 100px;
-  line-height: 100px;
+  min-height: 100px;
+  line-height: 44px;
+  padding: 28px 0;
   background-color: #1C71BF;
   color: #fff;
 }
@@ -253,7 +254,7 @@ body {
   color: #000;
 }
 .home-wrap footer .page-footer {
-  height: 540px;
+  min-height: 540px;
   background-image: url('../../img/png/bg-footer.jpg');
   background-position: center;
   background-size: auto 100%;
@@ -264,14 +265,52 @@ body {
 }
 .home-wrap footer .page-footer .footer-info {
   flex: 1;
-  padding: 30px 0;
+  padding-bottom: 30px;
+}
+.home-wrap footer .page-footer .footer-info .container > .row > div {
+  padding-top: 30px;
 }
 .home-wrap footer .page-footer .footer-info .title {
+  display: block;
   font-size: 20px;
   margin-bottom: 25px;
 }
 .home-wrap footer .page-footer .footer-info p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.home-wrap footer .page-footer .footer-info .zh-list {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+}
+.home-wrap footer .page-footer .footer-info .zh-list .icon {
+  margin-right: 5px;
+}
+.home-wrap footer .page-footer .footer-info .media img {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100px;
+  height: 80px;
+}
+.home-wrap footer .page-footer .footer-info .media .date {
+  display: block;
+  color: #999;
+  margin-top: 10px;
+}
+.home-wrap footer .page-footer .footer-info .media .media-body {
+  padding: 10px 0;
+}
+.home-wrap footer .page-footer .footer-info .media .media-heading {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.home-wrap footer .page-footer .footer-info .contact-from input,
+.home-wrap footer .page-footer .footer-info .contact-from textarea {
+  background-color: #353637;
+  border-color: #353637;
 }
 .home-wrap footer .page-footer hr {
   width: 100%;
@@ -279,7 +318,19 @@ body {
   height: 1px;
 }
 .home-wrap footer .page-footer .footer-copyright {
-  height: 100px;
-  line-height: 100px;
+  min-height: 100px;
+  line-height: 30px;
   border-top: 1px solid ;
+}
+.home-wrap footer .page-footer .footer-copyright .row {
+  padding: 35px 0;
+}
+.home-wrap footer .page-footer .footer-copyright .row > div {
+  height: 30px;
+}
+.home-wrap footer .page-footer .footer-copyright img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
