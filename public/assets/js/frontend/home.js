@@ -1,9 +1,7 @@
 define([
-  '../../libs/jquery/src/jquery',
   '../../libs/art-template/dist/template',
   'assets/js/frontend/homeData.js'
-], function ($, Template, homeData) {
-
+], function (Template, homeData) {
   const $elms = {
     searchBtn: $("#js-search-btn"),
     searchInput: $("#js-search-input"),
@@ -12,16 +10,23 @@ define([
     ourProduct: $('#ourProduct'),
     ourProductTemplate: $('#ourProductTemplate'),
 
+    aboutUs: $('#aboutUs'),
+    aboutUsTemplate: $('#aboutUsTemplate'),
+
     partners: $('#strategicPartners'),
-    partnersTemplate: $('#strategicPartnersTemplate')
+    partnersTemplate: $('#strategicPartnersTemplate'),
+
+    news: $('#newsCenter'),
+    newsTemplate: $('#newsCenterTemplate')
   }
 
   const homePage = {
     data: {
-
       temp: {
         ourProduct: Template.compile($elms.ourProductTemplate.html()),
-        partners: Template.compile($elms.partnersTemplate.html())
+        aboutUs: Template.compile($elms.aboutUsTemplate.html()),
+        partners: Template.compile($elms.partnersTemplate.html()),
+        news: Template.compile($elms.newsTemplate.html())
       }
     },
 
@@ -36,9 +41,28 @@ define([
       $elms.ourProduct.html(that.data.temp.ourProduct({
         products: homeData.ourProduct
       }))
+
+      $elms.aboutUs.html(that.data.temp.aboutUs({
+        aboutUs: homeData.aboutUs,
+        setCol: function(index) {
+          return index === 1 ? 6 : 3
+        },
+        setDefaultActive: function(index) {
+          return index === 0 ? 'active' : ''
+        }
+      }))
+
       $elms.partners.html(that.data.temp.partners({
         partners: homeData.partners
       }))
+
+      $elms.news.html(that.data.temp.news({
+        news: homeData.news
+      }))
+
+      setTimeout(() => {
+        $('.carousel').carousel()
+      }, 1000)
     },
 
 
