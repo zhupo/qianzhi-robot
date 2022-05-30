@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="__CDN__/assets/js/frontend/common/header/header.css">
+
+<nav id="page-navbar" class="navbar">
+  <div class="container-fluid container-flex">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="logo-wrap d-flex">
+              <img src="__CDN__/assets/img/png/logo.png" alt="logo">
+              <div class="pl-2">
+                  <span class="d-block font-bold f20">湖南千智机器人科技发展有限公司</span>
+                  <span class="d-block f12">HUNAN QIANZHI ROBOT TECHNOLOGY DEVELOPMENT CO,. LTD</span>
+              </div>
+          </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+              <li class="px-4">
+                  <form class="navbar-form navbar-left" id="js-search-from">
+                      <div class="form-group">
+                          <input type="text" class="form-control search-input" id="js-search-input"
+                              placeholder="Search" />
+                      </div>
+                      <span class="glyphicon glyphicon-search media-middle cursor-pointer" id="js-search-btn"
+                          aria-label="search button" aria-hidden="true">
+                      </span>
+                  </form>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                      aria-haspopup="true" aria-expanded="false">
+                      <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                      English
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">China</a></li>
+                      <li><a href="#">English</a></li>
+                  </ul>
+              </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right menu-list">
+              <li class="active"><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">CONTACT US</a></li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+    (function() {
+        setTimeout(() => {
+            var $banner = document.querySelector('#header-banner')
+            var $navbar = document.querySelector('#page-navbar')
+            var height = $banner.clientHeight
+            var timeStamp = 0
+            window.onscroll = function(e) {
+                if (e.timeStamp - timeStamp >= 1000) {
+                    timeStamp = e.timeStamp
+                    var isOver = document.documentElement.scrollTop > height
+                    $navbar.classList[isOver ? 'add' : 'remove']('is-over')
+                }
+            }
+        }, 2000)
+
+    })()
+</script>

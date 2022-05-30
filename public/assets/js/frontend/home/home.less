@@ -10,74 +10,14 @@ body {
   .home-header {
     height: 900px;
     width: 100%;
-    background: url('../../img/png/banner.jpg');
+    background: url('../../../img/png/banner.jpg');
     background-position: center;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    .navbar {
-      height: 100px;
-      font-size: 16px;
-      border-radius: 0 !important;
-      border-bottom: 2px solid @themeColor;
-      background-color: rgba(0, 0, 0, 0.3);
-      margin: 0 auto;
-      color: @themeColor;
-
-      .navbar-nav {
-        &>li>a {
-          color: @themeColor;
-        }
-        &.menu-list {
-          li {
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 5px;
-            a:hover {
-              transform: scale(1.3);
-              transition: all 0.3s ease-in-out;
-            }
-          }
-        }
-        &>li>a:hover,
-        &>li>a:focus {
-          background-color: transparent;
-          color: @themeColor;
-        }
-      }
-
-      .navbar-form {
-        line-height: 30px;
-        .search-input {
-          display: none;
-          width: 0;
-          border-radius: 5px;
-        }
-      }
-
-      .container-flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100px;
-        max-width: 1500px;
-
-        .logo-wrap {
-          height: 50px;
-          img {
-            height: 100%;
-          }
-        }
-      }
-
-      .navbar-header {
-        white-space: nowrap;
-      }
-    }
-
+    padding-top: 250px;
 
     .home-header-detail {
       color: @themeColor;
-      margin-top: 250px;
       .title {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -95,15 +35,15 @@ body {
 
       &.about-us {
         padding-bottom: 60px;
-        background-image: url('../../img/about-us/bg-left.png'),
-        url('../../img/about-us/bg-right.png');
+        background-image: url('../../../img/about-us/bg-left.png'),
+        url('../../../img/about-us/bg-right.png');
         background-position: 0 160px, 100% 160px;
         background-repeat: no-repeat, no-repeat;
       }
 
       &.strategic-partners {
         min-height: 600px;
-        background-image: url('../../img/png/partners-bg.jpg');
+        background-image: url('../../../img/png/partners-bg.jpg');
         background-position: center;
         background-size: auto 100%;
         background-repeat: no-repeat;
@@ -288,103 +228,4 @@ body {
     }
   }
 
-  footer {
-    .contact-us {
-      min-height: 100px;
-      line-height: 44px;
-      padding: 28px 0;
-      background-color: #1C71BF;
-      color: @themeColor;
-      .btn {
-        background-color: @themeColor;
-        color: #000;
-      }
-    }
-
-    .page-footer {
-      min-height: 540px;
-      background-image: url('../../img/png/bg-footer.jpg');
-      background-position: center;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      color: @themeColor;
-      .footer-info {
-        flex: 1;
-        padding-bottom: 30px;
-        .container > .row > div {
-          padding-top: 30px;
-        }
-        .title {
-          display: block;
-          font-size: 20px;
-          margin-bottom: 25px;
-        }
-        p {
-          margin-bottom: 15px;
-          font-size: 12px;
-        }
-        .zh-list {
-          display: flex;
-          align-items: baseline;
-          font-size: 14px;
-          .icon {
-            margin-right: 5px;
-          }
-        }
-
-        .media {
-          img {
-            background-color: @themeColor;
-            border-radius: 5px;
-            width: 100px;
-            height: 80px;
-          }
-          .date {
-            display: block;
-            color: #999;
-            margin-top: 10px;
-          }
-          .media-body {
-            padding: 10px 0;
-          }
-          .media-heading {
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-        }
-        .contact-from {
-          input, textarea {
-            background-color: #353637;
-            border-color: #353637;
-          }
-        }
-      }
-      hr {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
-        height: 1px;
-      }
-      .footer-copyright {
-        min-height: 100px;
-        line-height: 30px;
-        border-top: 1px solid ;
-        .row {
-          padding: 35px 0; 
-          & > div {
-            height: 30px;
-          }
-        }
-        img {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
 }
