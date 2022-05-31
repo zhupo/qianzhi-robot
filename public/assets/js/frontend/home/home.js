@@ -1,6 +1,6 @@
 define([
-  'assets/libs/art-template/dist/template.js',
-  'assets/js/frontend/home/homeData.js'
+  '../../../../assets/libs/art-template/dist/template.js',
+  '../../../../assets/js/frontend/home/homeData.js'
 ], function (Template, homeData) {
   const $elms = {
     searchBtn: $("#js-search-btn"),
