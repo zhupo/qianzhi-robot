@@ -65,12 +65,18 @@
             var $navbar = document.querySelector('#page-navbar')
             var height = $banner.clientHeight
             var timeStamp = 0
+            updateBackgroundColor()
+
             window.onscroll = function(e) {
-                if (e.timeStamp - timeStamp >= 1000) {
+                if (e.timeStamp - timeStamp >= 200) {
                     timeStamp = e.timeStamp
-                    var isOver = document.documentElement.scrollTop > height
-                    $navbar.classList[isOver ? 'add' : 'remove']('is-over')
+                    updateBackgroundColor()
                 }
+            }
+
+            function updateBackgroundColor() {
+                var isOver = document.documentElement.scrollTop > height
+                $navbar.classList[isOver ? 'add' : 'remove']('is-over')
             }
         }, 2000)
 
