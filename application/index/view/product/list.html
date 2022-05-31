@@ -3,7 +3,7 @@
 
 <head>
     {include file="common/meta" /}
-    <link rel="stylesheet" href="__CDN__/assets/js/frontend/product/detail/detail.css">
+    <link rel="stylesheet" href="__CDN__/assets/js/frontend/product/list/list.css">
 </head>
 
 <body class="product-wrap">
@@ -23,83 +23,45 @@
 </div>
 
 
-<main id="product-detail-body">
-    <div class="part-of-main-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="padding-right: 50px;">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="big-img-wrap"><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
+<main id="product-list-body">
+    <div class="container card-item">
+        <div class="row" id="productList">
+            <script id="productListTemplate" type="text/html">
+                {{each productList as item index}}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail content-item">
+                        <div class="card-img-wrap">
+                            <img src="{{item.image}}" alt="{{item.title}}">
                         </div>
-                        <div class="col-md-3 d-flex small-img-wrap">
-                            <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
-                            <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
-                            <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
+                        <div class="caption">
+                            <p class="font-bold f20 mt-3">{{ item.title }}</p>
+                            <p class="caption-content multiple-text-ellipsis">{{ item.description }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" style="padding-left: 50px;">
-                    <div class="product-name">
-                        <span class="f22 font-bold mr-4">Fire Robot</span>
-                        <span>Model: QZXF-050</span>
-                    </div>
-                    <p class="mt-2 mb-4 f12">Fire robots can carry life-detecting devices and carry fire-extinguishing fluids to ensure that people with vital signs are no longer injured twice.</p>
-                    <p class="font-bold f12 mb-1">Main Specifications</p>
-                    <table class="table table-bordered">
-                        <colgroup>
-                            <col width="60%">
-                            <col width="40%">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        <tr>
-                            <td>Maximum driving speed</td>
-                            <td>6km/h</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                {{/each}}
+            </script>
         </div>
+        <nav aria-label="Product list pagination" class="text-center nav-pagination">
+            <ul class="pagination" id="pagination">
+                <li class="prev disabled"><a href="javascript: void(0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class="active"><a href="javascript: void(0)">1</a></li>
+                <li class=""><a href="javascript: void(0)">2</a></li>
+                <li class=""><a href="javascript: void(0)">3</a></li>
+                <li class=""><a href="javascript: void(0)">4</a></li>
+                <li class=""><a href="javascript: void(0)">5</a></li>
+                <li class=""><a href="javascript: void(0)">6</a></li>
+                <li class="next"><a href="javascript: void(0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+        </nav>
     </div>
-
-
-
 </main>
 
 {include file="common/footer" /}
 {include file="common/script" /}
 
 <script
-        data-main="__CDN__/assets/js/frontend/product/detail/detail.js"
+        data-main="__CDN__/assets/js/frontend/product/list/list.js"
         src="__CDN__/assets/js/require.min.js"
 >
 </script>

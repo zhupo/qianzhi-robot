@@ -11,7 +11,7 @@ class Product extends Frontend
     protected $noNeedRight = '*';
     protected $layout = '';
 
-    public function index()
+    public function detail()
     {
         return $this->view->fetch();
     }

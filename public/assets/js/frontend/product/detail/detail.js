@@ -1,21 +1,17 @@
-define([
-  'assets/libs/art-template/dist/template.js'
-], function (Template) {
-
-
-
+define(["../../../../../assets/libs/art-template/dist/template.js"], function (
+  Template
+) {
   const productDetail = {
-    data: {
-    },
+    data: {},
 
     init() {
-      this.events()
-
+      this.events();
     },
 
-
     events() {
-      
+      $('video').live('contextmenu', function () {
+        return false;
+      });
     },
   };
 

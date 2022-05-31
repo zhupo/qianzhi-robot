@@ -1,9 +1,9 @@
 define([
-  'assets/libs/art-template/dist/template.js'
+  '../../../../../assets/libs/art-template/dist/template.js'
 ], function (Template) {
 
   const listItems =  Array(9).fill({
-    image: 'assets/img/png/robot-product-01.png',
+    image: '../../../../../assets/img/png/robot-product-01.png',
     title: 'Plant Protection Robot',
     description: 'The EOD robot is a special equipment used by the blasting personal.'
   })
