@@ -9,7 +9,7 @@ define(["../../../../../assets/libs/art-template/dist/template.js"], function (
     },
 
     events() {
-      $('video').live('contextmenu', function () {
+      $('video').on('contextmenu', function () {
         return false;
       });
     },
