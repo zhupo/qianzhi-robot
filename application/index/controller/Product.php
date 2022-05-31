@@ -4,7 +4,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 
-class Index extends Frontend
+class Product extends Frontend
 {
 
     protected $noNeedLogin = '*';
@@ -16,4 +16,8 @@ class Index extends Frontend
         return $this->view->fetch();
     }
 
+    public function list()
+    {
+        return $this->view->fetch();
+    }
 }
