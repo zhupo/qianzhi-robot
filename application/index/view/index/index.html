@@ -3,106 +3,183 @@
 
 <head>
     {include file="common/meta" /}
-    <link rel="stylesheet" href="__CDN__/assets/js/frontend/product/detail/detail.css">
+    <link rel="stylesheet" href="__CDN__/assets/js/frontend/home/home.css">
 </head>
 
-<body class="product-wrap">
-    {include file="common/header" /}
-    <div id="header-banner" class="product-header">
-        <div class="container relative" style="height: 100%;">
-            <div class="product-header-content">
-                <p class="title font-bold">PRODUCT CENTER</p>
-                <div>
-                    <span class="glyphicon glyphicon-home"></span>
-                    <span>Home</span>
-                    »
-                    <span>Product Center</span>
-                </div>
+<body class="home-wrap">
+{include file="common/header" /}
+<div id="header-banner" class="home-header">
+    <div class="home-header-detail text-center">
+        <span class="d-block top-title f18">BEST QUALITY SERVICE</span>
+        <span class="d-block title f50 font-bold">QIANZHI ROBOT</span>
+        <span class="d-block sub-title f28">Towards the goal of building a R&D heights of special robots in china</span>
+        <div class="but-group">
+            <a type="button" href="/" class="btn btn-info btn-lg mr-4">
+                Learn More
+            </a>
+            <a type="button" href="/" class="btn btn-danger btn-lg">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<main id="home-body">
+    <!-- out product -->
+    <div class="home-body-card our-product">
+        <div class="container card-item">
+            <div class="text-center">
+                <span class="top-title">Our Products</span>
+                <span class="title">BEST OF OUR WORKS</span>
+            </div>
+            <div class="row" id="ourProduct">
+                <script id="ourProductTemplate" type="text/html">
+                    {{each products as item index}}
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail content-item">
+                            <div class="card-img-wrap">
+                                <div class="card-img-wrap-bg"  style="background-image: url({{item.bgUrl}});">
+                                </div>
+                                <img src="{{item.imgUrl}}" alt="{{item.title}}">
+                            </div>
+                            <div class="caption">
+                                <p class="font-bold f20 mt-4">{{ item.title }}</p>
+                                <p class="caption-content multiple-text-ellipsis">{{ item.content }}</p>
+                                <a href="#" class="product-learn-more">
+                                    Learn More
+                                    <span class="glyphicon glyphicon-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
             </div>
         </div>
     </div>
 
+    <!-- about us -->
+    <div class="home-body-card about-us">
+        <div class="container card-item">
+            <div class="text-center">
+                <span class="top-title">About Us</span>
+                <span class="title f28 mb-4">Qianzhi Robotics</span>
+                <span class="sub-title">Qianzhi Robotics was established in October 2015 with a registered captial
+                        150 million yuan. It is a hight-tech enterprise specializing in the design and manufacture of
+                        special robots, service robots, R&D manufacture and automation equipment.</span>
+            </div>
+            <div id="aboutUs">
+                <script id="aboutUsTemplate" type="text/html">
+                    <div class="row">
+                        {{each aboutUs.items as item index}}
+                        <div class="text-center col-md-{{setCol(index)}} mt-4">
+                            <span class="about-item-title f20 font-bold">{{ item.title }}</span>
+                            <p class="about-item-sub-title f14">{{ item.content }}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <div class="row d-flex about-us-content">
+                        <div class="col-md-8 about-us-list">
+                            <div id="about-us-carousel" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    {{each aboutUs.banners as item index}}
+                                    <div class="item {{setDefaultActive(index)}}">
+                                        <img src="{{item.imgUrl}}" alt="about us">
+                                        <div class="carousel-caption">
+                                            <span class="f30">{{item.title}}</span>
+                                            <span>{{item.content}}</span>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                </div>
 
-    <main id="product-detail-body">
-        <div class="part-of-main-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6" style="padding-right: 50px;">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="big-img-wrap"><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
-                            </div>
-                            <div class="col-md-3 d-flex small-img-wrap">
-                                <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
-                                <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
-                                <div><img src="__CDN__/assets/img/png/robot-product-01.png" alt="product"></div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6" style="padding-left: 50px;">
-                        <div class="product-name">
-                            <span class="f22 font-bold mr-4">Fire Robot</span>
-                            <span>Model: QZXF-050</span>
+                        <div class="col-md-4 about-us-list right d-flex">
+                            {{each aboutUs.list as item index}}
+                            <div>
+                                <img src="{{item.imgUrl}}" alt="{{item.title}}">
+                                <span class="font-bold">{{item.title}}</span>
+                            </div>
+                            {{/each}}
                         </div>
-                        <p class="mt-2 mb-4 f12">Fire robots can carry life-detecting devices and carry fire-extinguishing fluids to ensure that people with vital signs are no longer injured twice.</p>
-                        <p class="font-bold f12 mb-1">Main Specifications</p>
-                        <table class="table table-bordered">
-                            <colgroup>
-                                <col width="60%">
-                                <col width="40%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Maximum driving speed</td>
-                                    <td>6km/h</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
-                </div>
+                </script>
             </div>
         </div>
+    </div>
 
+    <!-- strategic partners -->
+    <div class="home-body-card strategic-partners">
+        <div class="container">
+            <div class="text-center">
+                <span class="title font-bold">Strategic Partners</span>
+                <hr />
+            </div>
+            <div class="row" id="strategicPartners">
+                <script id="strategicPartnersTemplate" type="text/html">
+                    {{each partners as item index}}
+                    <div class="item col-sm-4 col-md-3">
+                        <div href="#" class="thumbnail p-0">
+                            <img src="{{ item.imgUrl }}" alt="partners">
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+    </div>
 
+    <!-- news center -->
+    <div class="home-body-card news-center">
+        <div class="container card-item">
+            <div class="text-center">
+                <span class="top-title">News Center</span>
+                <span class="title">Lastest News</span>
+            </div>
+            <div class="row" id="newsCenter">
+                <script id="newsCenterTemplate" type="text/html">
+                    {{each news as item index}}
+                    <div class="item col-sm-6 col-md-4">
+                        <div class="thumbnail content-item news-content-item">
+                            <div class="card-img-wrap">
+                                <img src="{{item.imgUrl}}" alt="{{item.title}}">
+                            </div>
+                            <div class="caption">
+                                <p class="font-bold f14 mt-2 text-ellipsis">{{ item.title }}</p>
+                                <p class="caption-content multiple-text-ellipsis mt-2">{{ item.content }}</p>
+                                <p class="news-date text-right f12">
+                                    <span class="d-iblock">{{item.date}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+    </div>
+</main>
 
-    </main>
+{include file="common/footer" /}
+{include file="common/script" /}
 
-    {include file="common/footer" /}
-    {include file="common/script" /}
-
-    <script 
-        data-main="__CDN__/assets/js/frontend/product/detail/detail.js" 
+<script
+        data-main="__CDN__/assets/js/frontend/home/home.js"
         src="__CDN__/assets/js/require.min.js"
-    >
-    </script>
+>
+</script>
 
 </body>
 
