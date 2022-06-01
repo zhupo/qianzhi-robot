@@ -35,6 +35,21 @@ define([
 
 
     events() {
+      // https://flaviusmatis.github.io/simplePagination.js/#page-20
+      $('#pagination').pagination({
+        items: 20,
+        itemOnPage: 9,
+        currentPage: 1,
+        cssStyle: '',
+        prevText: '<span aria-hidden="true">&laquo;</span>',
+        nextText: '<span aria-hidden="true">&raquo;</span>',
+        onInit: function () {
+            // fire first page loading
+        },
+        onPageClick: function (page, evt) {
+            // some code
+        }
+      });
       
     },
   };
