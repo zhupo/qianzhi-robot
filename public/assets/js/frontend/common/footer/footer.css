@@ -90,3 +90,10 @@ footer .page-footer .footer-copyright img {
   border-radius: 50%;
   margin-right: 10px;
 }
+@media screen and (max-width: 750px) {
+  .footer-copyright .row > div {
+    height: auto !important;
+    text-align: left;
+    margin-top: 20px;
+  }
+}
