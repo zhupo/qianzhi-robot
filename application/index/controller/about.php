@@ -4,7 +4,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 
-class ContactUs extends Frontend
+class About extends Frontend
 {
 
     protected $noNeedLogin = '*';
