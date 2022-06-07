@@ -1,6 +1,7 @@
 
 @themeColor: #fff;
 @redColor: #EF4E5D;
+@otherBg: #F2F6F9;
 
 body {
   background-color: @themeColor;
@@ -112,7 +113,7 @@ body {
         }
         
         .part-of-bottom {
-          background-color: #F2F6F9;
+          background-color: @otherBg;
           padding-bottom: 50px;
           .tech-item {
             margin-top: -40%;
@@ -175,6 +176,94 @@ body {
             }
           }
         }
+      }
+
+      &.about-us-honor {
+        ul, li {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        padding: 50px 0;
+        .part-of-honor {
+          background-image: url(./honor-bg.jpg);
+          background-position: center 0;
+          background-size: 100% auto;
+          background-repeat: no-repeat;
+          padding: 70px 0;
+          .title {
+            color: @themeColor;
+          }
+          .sub-title {
+            color: @themeColor;
+            padding-bottom: 30px;
+          }
+          .live-box ul {
+            width: 50%;
+            height: 500px;
+            margin: auto;
+            transform-style: preserve-3d;
+          }
+          .live-box li {
+            height: 100%;
+            position: relative;
+          }
+          .live-box img {
+            width: 100%;
+            height: 100%;
+            box-shadow:  0px 5px 6px #ccc, 0px 1px 10px #ccc;
+          }
+        }
+
+        .part-of-timeline {
+          background: @otherBg;
+          padding: 100px 0 50px;
+          .swiper {
+            height: 260px;
+            font-size: 12px;
+            padding: 0 50px;
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            height: calc(100% / 2);    
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-button-next, 
+          .swiper-button-prev {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #007aff;
+            margin-top: -15px;
+            &::after {
+              font-size: 14px;
+            }
+          }
+          .time-line {
+            width: calc(100% - 76px);
+            height: 2px;
+            background-color: #007aff;
+            position: absolute;
+            top: 50%;
+            left: 38px;
+            z-index: 9;
+          }
+        }
+
       }
     }
   }
