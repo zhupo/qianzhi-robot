@@ -26,7 +26,7 @@
 .qualification-honor .honor-box .box-con {
   /*border:1px solid transparent;*/
   width: 88%;
-  height: 52%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 6%;
@@ -35,25 +35,26 @@
   text-align: center;
   width: 320px;
   height: 188px;
-  background: transparent;
+  background: #fff;
   position: absolute;
   left: 660px;
   top: 66px;
   cursor: pointer;
   /*z-index: 10;*/
   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.4, transparent), to(rgba(0, 0, 0, 0.2)));
+  border-radius: 5px;
 }
 .qualification-honor .honor-box .box-con li img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 .qualification-honor .honor-box .prev,
-.qualification-honor .next {
+.qualification-honor .honor-box .next {
   width: 50%;
   height: 100%;
   display: block;
   position: absolute;
-  top: 13%;
+  top: 0;
   z-index: 51;
   cursor: pointer;
 }
